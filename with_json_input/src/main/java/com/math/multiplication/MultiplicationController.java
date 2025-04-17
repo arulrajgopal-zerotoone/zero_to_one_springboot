@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class AdditionController {
+public class MultiplicationController {
 
     // DTO class inside controller for simplicity
-    public static class AdditionRequest {
+    public static class MultiplicationRequest {
         public int a;
         public int b;
     }
 
-    @PostMapping("/add")
-    public int addNumbers(@RequestBody AdditionRequest request) {
+    @PostMapping("/mul")
+    public int MultiplyNumbers(@RequestBody MultiplicationRequest request) {
         return request.a  * request.b;
     }
 }
